@@ -29,12 +29,21 @@
   }
 }
 
+.card {
+  background-color: rgb(36, 243, 147);
+  animation: cardEntrance 700ms ease-out;
+  /* Prevents elements to be visible before animation */
+  animation-fill-mode: backwards;
+}
+
 .card:nth-child(1) {
   grid-area: a;
+  animation-delay: calc(1 * var(--stagger-delay));
 }
 
 .card:nth-child(2) {
   grid-area: b;
+  animation-delay: calc(2 * var(--stagger-delay));
 }
 
 .card:last-child {
